@@ -17,35 +17,102 @@
   </head>
   <body>
     <div id="app">
-      <header>
-        <h1 class="text-center">{{ SiteName }}</h1>
-        <button class="btn btn-primary">
-          {{ addToCard }}
-          <i class="fa-solid fa-cart-shopping"></i> Checkout
+      <div
+        class="container-fluid d-flex justify-content-around align-items-center py-3 fixed-top bg-primary"
+      >
+        <h1 class="text-center text-white fs-4">{{ siteName }}</h1>
+        <button type="button" class="btn btn-secondary">
+          <i class="fa-solid fa-cart-shopping"></i> Cart ({{ cartItemCount }})
         </button>
-      </header>
-      <main>
-        <input v-model="text" aria-placeholder="Add to Cart" />
-      </main>
+      </div>
+      <!-- Product Card Section -->
+      <div
+        class="container d-flex flex-wrap justify-content-around align-items-center pt-5 mt-5"
+      >
+        <div
+          class="card mb-3"
+          style="width: 18rem"
+          v-for="product in products"
+          :key="product.id"
+        >
+          <img
+            :src="product.image || 'placeholder.jpg'"
+            class="card-img-top"
+            alt="Product image"
+          />
+          <div class="card-body">
+            <h6 class="card-title">Subject: {{ product.name }}</h6>
+            <p class="card-text">Location: {{ product.location }}</p>
+            <p class="card-text">Price: £{{ product.price }}</p>
+
+            <button
+              class="btn btn-primary"
+              @click="addToCart(product)"
+              :disabled="product.slots <= 0"
+            >
+              Add to Cart
+            </button>
+
+            <!-- Conditionally show the stock status -->
+            <span class="ms-5" v-if="product.slots === 0">All Out!</span>
+            <span class="ms-5" v-else-if="product.slots < 5">
+              Only {{ product.slots }} left!
+            </span>
+            <span class="ms-5" v-else>Buy Now!</span>
+
+            <!-- Display the rating as stars -->
+            <div class="mt-2">
+              <span v-for="n in product.rating" :key="n">★</span>
+              <span v-for="n in 5 - product.rating" :key="n">☆</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     <script>
       let app = new Vue({
         el: "#app",
         data() {
           return {
-            SiteName: "Vue Pet Depot",
-
-            cart: [],
+            siteName: "Vue Pet Depot",
+            products: [], // Initially an empty array to store products
+            cart: [], // Array to hold the product IDs added to the cart
           };
         },
-
+        created() {
+          // Fetch the product data from the JSON file
+          fetch("/product.json") // Replace with the correct path to your product.json
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              this.products = data; // Assign the fetched data to the products array
+            })
+            .catch((error) => {
+              console.error(
+                "There was a problem fetching the product data:",
+                error
+              );
+            });
+        },
         methods: {
-          addToCart() {
-            this.cart.push(this.product.id);
+          addToCart(product) {
+            if (product.slots > 0) {
+              this.cart.push(product.id); // Add product ID to the cart
+              product.slots--; // Decrease the number of available slots after adding to the cart
+            }
           },
         },
-
-        computed: {},
+        computed: {
+          // Computed property to return the number of items in the cart
+          cartItemCount() {
+            return this.cart.length;
+          },
+        },
       });
     </script>
   </body>
