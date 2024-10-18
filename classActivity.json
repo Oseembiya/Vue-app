@@ -1,0 +1,74 @@
+[
+  {
+    "id": 2001,
+    "name": "Beginner Ballet Class",
+    "location": "Gymnasium A, New York, NY",
+    "slots": 10,
+    "price": 150.0,
+    "rating": 5,
+    "image": "/asset/images/ballet-class.jpg"
+  },
+  {
+    "id": 2002,
+    "name": "Advanced Coding BootCamp",
+    "location": "Room 101, San Francisco, CA",
+    "slots": 10,
+    "price": 300.0,
+    "rating": 4,
+    "image": "/asset/images/coding-bootCamp.jpg"
+  },
+  {
+    "id": 2003,
+    "name": "Soccer Training - Intermediate",
+    "location": "Sports Field, Chicago, IL",
+    "slots": 10,
+    "price": 100.0,
+    "rating": 5,
+    "image": "/asset/images/soccer-training.jpg"
+  },
+  {
+    "id": 2004,
+    "name": "Art Workshop - Painting",
+    "location": "Art Studio, Miami, FL",
+    "slots": 10,
+    "price": 75.0,
+    "rating": 4,
+    "image": "/asset/images/art-workshop.jpg"
+  },
+  {
+    "id": 2005,
+    "name": "Robotics Club",
+    "location": "Lab 303, Los Angeles, CA",
+    "slots": 10,
+    "price": 200.0,
+    "rating": 5,
+    "image": "/asset/images/robotics-club.jpg"
+  },
+  {
+    "id": 2006,
+    "name": "Beginner Guitar Lessons",
+    "location": "Music Room, Seattle, WA",
+    "slots": 10,
+    "price": 120.0,
+    "rating": 4,
+    "image": "/asset/images/guitar-lessons.jpg"
+  },
+  {
+    "id": 2007,
+    "name": "Swim Lessons - All Levels",
+    "location": "Community Pool, Austin, TX",
+    "slots": 10,
+    "price": 80.0,
+    "rating": 5,
+    "image": "/asset/images/swim-lessons.jpg"
+  },
+  {
+    "id": 2008,
+    "name": "Chess Club - Beginners",
+    "location": "Library, Orlando, FL",
+    "slots": 10,
+    "price": 50.0,
+    "rating": 4,
+    "image": "/asset/images/chess-club.jpg"
+  }
+]
