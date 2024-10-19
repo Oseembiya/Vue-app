@@ -73,10 +73,6 @@ h1 {
   display: none; /* Initially hide the button */
 }
 
-.list-group-item:hover .delete-btn {
-  display: block; /* Show the delete button on hover */
-}
-
 .container {
   height: 100%;
   display: flex;
@@ -103,7 +99,7 @@ h1 {
   object-fit: contain;
 }
 
-.View-Item-Card {
+.View-Item {
   display: none;
   position: absolute;
   top: 10px;
@@ -115,7 +111,7 @@ h1 {
   z-index: 1;
 }
 
-.card:hover .View-Item-Card {
+.card:hover .View-Item {
   display: block; /* Show the message on hover */
 }
 
