@@ -30,7 +30,7 @@
           <!-- Logo and Site Name -->
           <div class="navbar-brand d-flex align-items-center" id="fullLogo">
             <img
-              src="/asset/logo/pet.jpg"
+              src="/asset/images/logo/logo.jpg"
               alt="ParentPay Logo"
               class="logo me-2"
             />
@@ -82,6 +82,24 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#contact">Contact Us</a>
+              </li>
+
+              <li class="nav item dropdown">
+                <button
+                  class="btn btn-outline-light dropdown-toggle ms-5 no-border"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  24/7 Help
+                </button>
+                <ul class="dropdown-menu dropdown-menu-secondary mt-3">
+                  <li class="dropdown-item">07855 464 55 755</li>
+                  <li>
+                    <a class="dropdown-item" href="https://mail.google.com"
+                      >parentpay@gmail.com</a
+                    >
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -236,7 +254,7 @@
         </div>
       </div>
 
-      <!-- Carousel hero min-->
+      <!-- Carousel hero section-->
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button
@@ -263,7 +281,7 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="/asset/images/carousel-1.avif"
+              src="/asset/images/carousal1.jpg"
               class="d-block w-100"
               alt="..."
             />
@@ -304,9 +322,6 @@
       </div>
 
       <!-- List of classes activities  -->
-      <h1 id="classes" class="text-center fw-light mt-lg-5">
-        Stay Active with Our School Activities
-      </h1>
       <div
         class="container d-flex flex-wrap justify-content-around align-items-center pt-5 mt-5"
       >
@@ -323,7 +338,7 @@
           />
           <div class="card-body">
             <h6 class="card-title">{{ classActivity.name }}</h6>
-            <p class="card-text mb-1">Space: 10</p>
+            <p class="card-text mb-1">Space: {{ classActivity.slots }}</p>
             <p class="card-text">Price: £{{ classActivity.price }}</p>
             <button
               class="btn btn-primary"
@@ -367,6 +382,7 @@
               method: "Home",
               state: "",
             },
+
             states: ["Alabama", "Alaska", "Arizona", "California", "Nevada"],
             swipedIndex: null, // Tracks the swiped item
             startX: 0, // Stores the initial X position of the touch
