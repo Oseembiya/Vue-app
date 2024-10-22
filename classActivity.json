@@ -6,7 +6,7 @@
     "slots": 10,
     "price": 150.0,
     "rating": 5,
-    "image": "/asset/images/ballet-class.jpg"
+    "image": "/asset/images/ballot.jpg"
   },
   {
     "id": 2002,
@@ -15,7 +15,7 @@
     "slots": 10,
     "price": 300.0,
     "rating": 4,
-    "image": "/asset/images/coding-bootCamp.jpg"
+    "image": "/asset/images/codeCamp.jpg"
   },
   {
     "id": 2003,
@@ -24,7 +24,7 @@
     "slots": 10,
     "price": 100.0,
     "rating": 5,
-    "image": "/asset/images/soccer-training.jpg"
+    "image": "/asset/images/soccer.jpg"
   },
   {
     "id": 2004,
@@ -33,7 +33,7 @@
     "slots": 10,
     "price": 75.0,
     "rating": 4,
-    "image": "/asset/images/art-workshop.jpg"
+    "image": "/asset/images/artClass.jpg"
   },
   {
     "id": 2005,
@@ -42,7 +42,7 @@
     "slots": 10,
     "price": 200.0,
     "rating": 5,
-    "image": "/asset/images/robotics-club.jpg"
+    "image": "/asset/images/robot.jpg"
   },
   {
     "id": 2006,
@@ -51,7 +51,7 @@
     "slots": 10,
     "price": 120.0,
     "rating": 4,
-    "image": "/asset/images/guitar-lessons.jpg"
+    "image": "/asset/images/guitar.jpg"
   },
   {
     "id": 2007,
@@ -60,7 +60,7 @@
     "slots": 10,
     "price": 80.0,
     "rating": 5,
-    "image": "/asset/images/swim-lessons.jpg"
+    "image": "/asset/images/swim.jpg"
   },
   {
     "id": 2008,
@@ -69,6 +69,6 @@
     "slots": 10,
     "price": 50.0,
     "rating": 4,
-    "image": "/asset/images/chess-club.jpg"
+    "image": "/asset/images/chess.jpg"
   }
 ]
